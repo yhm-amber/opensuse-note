@@ -2,7 +2,7 @@
 ## necessary
 
 ~~~ sh
-zypper in -y -- rsync cargo xrdp tigervnc screen libvirt qemu-kvm firecracker neovim htop screenfetch neofetch suse-module-tools
+zypper in -y -- rsync cargo xrdp tigervnc screen libvirt qemu-kvm firecracker neovim htop screenfetch neofetch suse-module-tools guestfs-tools
 zypper in -t pattern -y -- kvm_tools xen_tools
 zypper in -y -- snapper-zypp-plugin yast2-snapper
 ~~~
