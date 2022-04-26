@@ -1,2 +1,2 @@
 # opensuse-note
-opensuse Leap usage note
+opensuse Leap (and maybe also some other linux) usage note
