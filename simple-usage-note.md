@@ -59,6 +59,63 @@ docker load -i hello.tar.xz
 
 ## 网络
 
-### NetworkManager
+### `NetworkManager`
 
-(todo...)
+当下比较流行的网络管理组件就是 `NetworkManager` 。还有一些别的(todo...)
+
+使用 `nmcli` 操作一个已启动的 `NetworkManager` 服务。
+
+#### 列出
+
+具体的 `nmcli` 的子命令可以在 `--help` 选项中看到。
+
+它还有个特性就是缩写的机制。比如，这些个命令是一样的：
+
+- `nmcli c show`
+- `nmcli con show`
+- `nmcli conn show`
+- `nmcli connection show`
+
+其中的 `show` 如果忽略的话，效果也是一样的。只要 `conn` 后面什么也没有，默认就是执行它的 `show` 子命令。另外， `show` 也可缩写为 `s` ： `nmcli c s` 。
+
+这个命令用来列出所有的连接。
+
+连接是名词。
+
+如果想只显示名称的字段：
+
+~~~ sh
+nmcli -f NAME -- c s
+~~~
+
+简单显示的模式：
+
+~~~ sh
+nmcli -t -- c s
+nmcli -f NAME -t -- c s
+~~~
+
+#### 更改
+
+静态：
+
+~~~ sh
+nmcli c m <CONN-NAME> ipv4.method manual ipv4.address 10.1.0.123/24 ipv4.gateway 10.1.0.254 ipv4.dns 1.1.1.1,1.0.0.1 connection.autoconnect yes
+
+nmcli c d <OTH-NAME>
+~~~
+
+同时你可能不希望别的某个连接自动开启：
+
+~~~ sh
+nmcli c m <SOME-CONN-NAME> connection.autoconnect no
+nmcli c d <SOME-CONN-NAME>
+~~~
+
+其中：
+
+- `m` 就是 `modify` ，也可写作 `mod` ，意思是更改，效果也是更改。
+- `d` 就是 `down` ，在连接后面意思是断开（效果也是）；相反的意思是 `up` （效果也是）， `up` 简写为 `u` 。
+
+
+
