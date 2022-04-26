@@ -101,7 +101,6 @@ nmcli -f NAME -t -- c s
 
 ~~~ sh
 nmcli c m <CONN-NAME> ipv4.method manual ipv4.address 10.1.0.123/24 ipv4.gateway 10.1.0.254 ipv4.dns 1.1.1.1,1.0.0.1 connection.autoconnect yes
-nmcli c d <OTH-NAME>
 ~~~
 
 同时你可能不希望别的某个连接自动开启：
