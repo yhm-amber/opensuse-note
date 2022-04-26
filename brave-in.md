@@ -1,4 +1,6 @@
+ref: https://brave.com/linux/
 
+----
 
 Brave is only supported on 64-bit AMD/Intel architectures (amd64 / x86_64).
 
