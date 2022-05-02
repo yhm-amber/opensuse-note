@@ -7,4 +7,6 @@ a fun linux note
 
 这里面其实是记录 GNU/Linux 的使用，但是鉴于上述（不限于）原因，我打算以这款发行版（ `Leap 15.2` ）作为 GNU/Linux 的**简单使用示例**的演示基础。
 
-所以这里的 SUSE 也可以是 Simple-gnu/linux-USagE 的简称。😗
+所以这里的 SUSE 也可以是 Simple-gnu/linux-USagE 或者甚至是 Simple-USagE 的简称。😗
+
+（你问 open ？它 open 不就是个动作吗？不就「打开」嘛！会嘛！🙃）
