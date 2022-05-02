@@ -1,4 +1,4 @@
-note about Simple USagE to OPEN a linux 😛 (linux means: Linux Is Not only linUX ...)
+note about Simple USagE to OPEN a linux 😛 (linux means: Linux Is Not JUST 🤏 a linUX ...)
 --------
 
 - 他们有好多好用的工具。比如 `snapper` 、 `zypper` 。
