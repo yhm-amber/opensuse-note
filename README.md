@@ -9,4 +9,4 @@ note about Simple USagE to OPEN a linux 😛 (linux means: Linux Is Not JUST �
 
 所以这里的 SUSE 也可以是 Simple-gnu/linux-USagE 或者甚至是 Simple-USagE 的简称。😗
 
-（你问 open ？它 open 不就是个动作吗？不就「打开」嘛！会嘛！🙃）
+（你问 open ？它 open 不就是个动作吗？不就「打开」嘛！嗯？会嘛！🙃）
