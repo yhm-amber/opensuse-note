@@ -10,23 +10,23 @@ firewall-cmd --get-services|fgrep vnc
 : cat /usr/lib/firewalld/services/vnc-server.xml
 
 
-: snapper create --command 'firewall-cmd --zone=public --add-service=http ## 运行时规则'
-: snapper create --command 'firewall-cmd --zone=public --add-service=http --permanent ## 永久规则'
+: snapper create -d 'firewall pub http once' --command 'firewall-cmd --zone=public --add-service=http ## 运行时规则'
+: snapper create -d 'firewall pub http' --command 'firewall-cmd --zone=public --add-service=http --permanent ## 永久规则'
 
-snapper create --command 'firewall-cmd --zone=public --add-service=tigervnc --permanent'
-snapper create --command 'firewall-cmd --zone=public --add-service=vnc-server --permanent'
+snapper create -d 'firewall pub tigervnc' --command 'firewall-cmd --zone=public --add-service=tigervnc --permanent'
+snapper create -d 'firewall pub vnc-server' --command 'firewall-cmd --zone=public --add-service=vnc-server --permanent'
 firewall-cmd --list-services --permanent
 
 : 开放特定的端口（TCP/UDP），例如开放 TCP/UDP 端口：55527：
 
-: snapper create --command 'firewall-cmd --zone=public --add-port=55527/tcp --permanent'
-: snapper create --command 'firewall-cmd --zone=public --add-port=55527/udp --permanent'
+: snapper create -d 'firewall pub 55527/tcp' --command 'firewall-cmd --zone=public --add-port=55527/tcp --permanent'
+: snapper create -d 'firewall pub 55527/udp' --command 'firewall-cmd --zone=public --add-port=55527/udp --permanent'
 
 sudo firewall-cmd --zone=public --list-ports
 sudo firewall-cmd --zone=public --list-ports --permanent
 
 : 拒绝/禁用 23/tcp 端口
-: snapper create --command 'firewall-cmd --zone=public --remove-port=23/tcp --permanent'
+: snapper create -d 'firewall rm 23/tcp' --command 'firewall-cmd --zone=public --remove-port=23/tcp --permanent'
 
 : 刷新配置
 sudo systemctl reload firewalld
