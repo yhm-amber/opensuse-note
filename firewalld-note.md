@@ -17,10 +17,10 @@ snapper create -d 'firewall pub tigervnc' --command 'firewall-cmd --zone=public 
 snapper create -d 'firewall pub vnc-server' --command 'firewall-cmd --zone=public --add-service=vnc-server --permanent'
 firewall-cmd --list-services --permanent
 
-: 开放特定的端口（TCP/UDP），例如开放 TCP/UDP 端口：55527：
+: 开放特定的端口（TCP/UDP），例如开放 TCP/UDP 端口：6443：
 
-: snapper create -d 'firewall pub 55527/tcp' --command 'firewall-cmd --zone=public --add-port=55527/tcp --permanent'
-: snapper create -d 'firewall pub 55527/udp' --command 'firewall-cmd --zone=public --add-port=55527/udp --permanent'
+: snapper create -d 'firewall pub 6443/tcp' --command 'firewall-cmd --zone=public --add-port=6443/tcp --permanent'
+: snapper create -d 'firewall pub 6443/udp' --command 'firewall-cmd --zone=public --add-port=6443/udp --permanent'
 
 sudo firewall-cmd --zone=public --list-ports
 sudo firewall-cmd --zone=public --list-ports --permanent
