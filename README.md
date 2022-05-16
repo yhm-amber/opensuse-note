@@ -1,4 +1,4 @@
-note about simpler usage on some GNU/Linux (or may be some other os)
+note about os usage
 --------
 
 ## opensuse
