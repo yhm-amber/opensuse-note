@@ -1,4 +1,10 @@
+
+~~~ factor
 note about os usage
+~~~
+
+其实一开始就是记录了一下 SUSE 里面一些工具的使用说明……
+
 --------
 
 ## opensuse
